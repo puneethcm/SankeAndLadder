@@ -1,8 +1,10 @@
 ﻿internal class Program
 {
-    private static void Main(string[] args)
+    public static void Main(string[] args)
     {
-        Console.WriteLine("Welcome to Snake and Ladder Game");
+        int start = 0;
+        Console.WriteLine("Welcome to snake and ladder Game");
+        Console.WriteLine("\nStart Position:" + start);
         Console.ReadLine();
     }
 }

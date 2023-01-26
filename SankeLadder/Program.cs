@@ -16,7 +16,6 @@
                 if (playerPosition <= 0)
                 {
                     playerPosition = 0;
-                    //Console.WriteLine("Player Position is: " + playerPosition);
                 }
                 Console.WriteLine("snake");
                 Console.WriteLine("Player Position is: " + playerPosition);

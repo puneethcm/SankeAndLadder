@@ -8,7 +8,7 @@
         {
             Random random = new Random();
             int roll = random.Next(1, 7);
-            Console.WriteLine("\nAfter Rolling a dice: " + roll);
+            Console.WriteLine("\nDice is Rolled: " + roll);
             int Option = random.Next(0, 3);
             if (Option == 0)
             {
@@ -24,6 +24,10 @@
             else if (Option == 1)
             {
                 playerPosition = playerPosition + roll;
+                if (playerPosition > 100)
+                {
+                    playerPosition = playerPosition - roll;
+                }
                 Console.WriteLine("ladder");
                 Console.WriteLine("Player Position is: " + playerPosition);
             }
@@ -31,6 +35,11 @@
             {
                 Console.WriteLine("no play ");
                 Console.WriteLine("Player Position is: " + playerPosition);
+            }
+
+            if (playerPosition == 100)
+            {
+                Console.WriteLine("Player is won");
             }
             Console.ReadLine();
         }

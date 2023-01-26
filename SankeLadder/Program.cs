@@ -2,7 +2,7 @@
 {
     public static void Main(string[] args)
     {
-        int start = 0,playerPosition = 0; ;
+        int start = 0,playerPosition = 0, diceCount=0, TotalDice=0;
         Console.WriteLine("Start Position:" + start);
         while (playerPosition < 100)
         {
@@ -19,7 +19,7 @@
                 }
                 Console.WriteLine("snake");
                 Console.WriteLine("Player Position is: " + playerPosition);
-                
+                diceCount++;
             }
             else if (Option == 1)
             {
@@ -30,11 +30,18 @@
                 }
                 Console.WriteLine("ladder");
                 Console.WriteLine("Player Position is: " + playerPosition);
+                diceCount++;
             }
             else
             {
                 Console.WriteLine("no play ");
                 Console.WriteLine("Player Position is: " + playerPosition);
+                diceCount++;
+            }
+
+            if (playerPosition == 100)
+            {
+                Console.WriteLine("Player is won");
             }
 
             if (playerPosition == 100)
@@ -43,5 +50,8 @@
             }
             Console.ReadLine();
         }
+        TotalDice += diceCount;
+        Console.WriteLine("Total dice count: " + TotalDice);
+        Console.ReadLine();
     }
 }

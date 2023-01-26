@@ -8,7 +8,7 @@
         {
             Random random = new Random();
             int roll = random.Next(1, 7);
-            Console.WriteLine("\nAfter Rolling a dice: " + roll);
+            Console.WriteLine("\nDice is Rolled: " + roll);
             int Option = random.Next(0, 3);
             if (Option == 0)
             {
